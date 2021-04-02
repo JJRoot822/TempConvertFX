@@ -1,0 +1,109 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<GridPane fx:controller="com.joshrootdev.tempconvert.controllers.MainWindowController"
+          xmlns:fx="http://javafx.com/fxml"
+          hgap="10"
+          vgap="10">
+    <padding>
+        <Insets>
+            <top>15</top>
+            <right>15</right>
+            <bottom>15</bottom>
+            <left>15</left>
+        </Insets>
+    </padding>
+    <ComboBox GridPane.columnSpan="3"
+              GridPane.columnIndex="0"
+              GridPane.rowIndex="0"
+              fx:id="conversionTypeBox"
+              prefWidth="230" promptText="Please Choose a Conversion Type">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Fahrenheit to Celsius" />
+                <String fx:value="Fahrenheit to Kelvin" />
+                <String fx:value="Celsius to Fahrenheit" />
+                <String fx:value="Celsius to Kelvin" />
+                <String fx:value="Kelvin to Fahrenheit" />
+                <String fx:value="Kelvin to Celsius" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+    <TextField fx:id="fromField"
+               promptText="From"
+               prefWidth="70"
+               GridPane.columnIndex="0"
+               GridPane.rowIndex="1" />
+    <ImageView fx:id="forwardArrayImg"
+               GridPane.columnIndex="1"
+               GridPane.rowIndex="1"
+               GridPane.halignment="CENTER">
+        <image>
+            <Image url="@../ic_arrow_forward_white_18dp.png" />
+        </image>
+    </ImageView>
+    <TextField fx:id="toField"
+               promptText="To"
+               prefWidth="70"
+               GridPane.columnIndex="2"
+               GridPane.rowIndex="1" />
+    <Button fx:id="convertBtn"
+            onAction="#convert"
+            text="Calculate"
+            styleClass="btn-primary"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="2"
+            prefWidth="70" />
+    <Button fx:id="convertBtn"
+            onAction="#reset"
+            text="Reset"
+            styleClass="btn-secondary"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="2"
+            prefWidth="70" />
+    <Button fx:id="convertBtn"
+            onAction="#close"
+            text="Close"
+            styleClass="btn-error"
+            GridPane.columnIndex="2"
+            GridPane.rowIndex="2"
+            prefWidth="70" />
+</GridPane>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
